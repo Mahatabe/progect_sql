@@ -1,0 +1,16 @@
+
+drop database link server;
+
+create database link server
+ connect to system identified by "123456"
+ using '(DESCRIPTION =
+       (ADDRESS_LIST =
+         (ADDRESS = (PROTOCOL = TCP)
+		 (HOST = 192.168.1.6)
+		 (PORT = 1622))
+       )
+       (CONNECT_DATA =
+         (SID = XE)
+       )
+     )'
+;  
